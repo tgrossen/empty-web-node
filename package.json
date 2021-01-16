@@ -1,0 +1,8 @@
+{
+  "name": "empty-web-node",
+  "license": "UNLICENSED",
+  "repository": "git@github.com:tgrossen/empty-web-node",
+  "author": "Travis Grossen <tgrossen@gmail.com>",
+  "private": true,
+  "dependencies": {}
+}

@@ -1,0 +1,11 @@
+build
+.DS_Store
+node_modules
+logs
+*.log
+.idea
+.dev-user
+npm-debug.*
+**/logs/*
+.awcache
+config.json
