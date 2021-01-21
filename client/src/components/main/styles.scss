@@ -5,7 +5,6 @@
 
   body {
     margin: 0;
-    background-color: black;
     width: 100%;
     padding-bottom: 56.25%;
   }
@@ -13,20 +12,4 @@
 
 .main {
   display: flex;
-
-  .secondColumn {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    width: 480px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .thirdColumn {
-    padding-top: 32px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
 }
