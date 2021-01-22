@@ -1,4 +1,7 @@
 const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
+const src = path.resolve('src')
 
 const config = {
   entry: {
@@ -15,6 +18,7 @@ const config = {
     },
     extensions: ['.js', '.ts', '.tsx', '.scss', '.css'],
   },
+  plugins: [new MiniCssExtractPlugin()],
   module: {
     rules: [
       {
@@ -29,9 +33,19 @@ const config = {
       {
         test: /\.scss$/,
         use: [
-          'style-loader',
-          { loader: 'css-loader', options: { modules: true } },
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              importLoaders: 1,
+            },
+          },
+          'sass-loader',
         ],
+        include: src,
       },
     ],
   },
